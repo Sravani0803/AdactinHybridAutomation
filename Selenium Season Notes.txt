@@ -1,0 +1,1336 @@
+
+
+***************************************
+Selenium Season -1 
+***************************************
+
+-----------------------------------------
+Day - 22nd April  - Monday 
+
+https://www.selenium.dev/
+
+Selenium automates browsers. That's it!
+
+Primarily it is for automating web applications for testing purposes.
+
+Selenium supports below languages 
+
+Java , Python , JavaScript , Ruby , C# 
+
+
+How to download Selenium jar or libraries ?
+
+go to offical website https://www.selenium.dev/
+
+Click on "downloads"
+
+Scroll to below text in the Page
+
+"Previous Releases
+Here you can find a more complete list of Selenium releases."
+
+Click "releases" hyperlink 
+
+a new Window pops up , 
+
+here expand Selenium 3.141.59 version
+
+click on "selenium-server-standalone-3.141.59.jar"
+
+selenium jar will get downloaded 
+
+
+------------------------------
+Steps to add Selenium jar to Java Project 
+
+
+-> right click on "Project" --> Build path --> Click on "Configure Build path"
+
+--> click on "libraries" tab --> click on "classpath" --> click on "Add External jars" button 
+
+Now go to or browse to the loaction where you downloaded or saved the jar 
+
+-> click on jar or file -> click "open" --> click "Apply" --> click "Apply and Close" 
+
+Now you should see selenium under "Referenced Libaries" in project 
+
+
+=============================================
+Selenium Architecture 
+
+org.openqa.selenium
+org.openqa.selenium.chrome
+org.openqa.selenium.edge
+
+
+ChromeDriver()
+ChromeDriver(ChromeDriverService)
+ChromeDriver(ChromeDriverService, ChromeOptions)
+ChromeDriver(ChromeOptions)
+
+Exception in thread "main" java.lang.IllegalStateException:
+
+ The path to the driver executable must be set by the webdriver.chrome.driver system property;
+ for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver.
+ The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
+ 
+ 
+chrome browser version : Version 123.0.6312.124 (Official Build) (64-bit)
+
+chromedriver.exe 
+
+https://storage.googleapis.com/chrome-for-testing-public/123.0.6312.122/win64/chromedriver-win64.zip
+
+
+??????????????????????????????????/////
+Assignment 
+
+
+to launch Edge browser and Firefox Browser 
+
+???????????????????????????????????????????????????????
+
+
+
+
+Exception in thread "main" java.lang.IllegalStateException:
+ The path to the driver executable must be set by the webdriver.gecko.driver system property;
+ for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+
+
+Exception in thread "main" java.lang.IllegalStateException: 
+The path to the driver executable must be set by the webdriver.edge.driver system property;
+ for more information, see https://github.com/SeleniumHQ/selenium/wiki/MicrosoftWebDriver. The latest version can be downloaded from http://go.microsoft.com/fwlink/?LinkId=619687
+
+Boni garcia 
+
+
+WebDriverManager
+
+
+----------------------------
+WebDriver Sub interfaces 
+
+org.openqa.selenium.WebDriver.Navigation
+org.openqa.selenium.WebDriver.Options
+org.openqa.selenium.WebDriver.TargetLocator
+org.openqa.selenium.WebDriver.Timeouts
+org.openqa.selenium.WebDriver.Window
+
+----------------------------------
+WebDriver methods (13) 
+
+close():void
+findElement(By):WebElement
+findElements(By):List<WebElement>
+get(String):void 
+getCurrentUrl():String
+getPageSource():String
+getTitle():String
+getWindowHandle():String
+getWindowHandles():Set<String>
+manage():Options
+navigate():Navigation
+quit():void 
+switchTo():TargetLocator
+
+
+
+
+------------------------
+get(String):void 
+
+here String is the URL of app like "https://adactinhotelapp.com/"
+
+this is to launch the app 
+
+---------------
+close():void 
+
+this will close a window or tab on which the Webdriver focus 
+
+WARNING: onError
+java.net.SocketException: Connection reset
+
+this will not kill the driver executable e.g chromedriver.exe 
+
+---------------
+quit():void 
+
+this will close all windows or tabs opened during session 
+
+this will kill  the driver executable e.g chromedriver.exe 
+
+
+--------------------------
+getTitle():String 
+
+
+
+--------------------------------
+getCurrentUrl():String 
+
+this will return the address present in address bar in form of String 
+
+-----------------------------------
+
+getPageSource():String 
+
+this will return the html page source code in form of String 
+
+
+-------------------------------------------------------
+
+getWindowHandle():String 
+this will return the window id of the tab/window on which WebDriver focus is 
+
+EC1D2FC568304DC372559D2C063CDA9C
+
+--------------------------------------------------------
+getWindowHandles():Set<String>
+
+this will return the window id's of the all the tab's/window's opened during that session 
+
+----------------------------------------------------------------
+manage():Options 
+
+this is used to manage cookies , window , synchronization etc ..
+
+addCookie(Cookie)
+deleteAllCookies()
+deleteCookie(Cookie)
+deleteCookieNamed(String)
+getCookieNamed(String)
+getCookies()
+logs()
+timeouts()
+window():Window 
+
+fullscreen()
+getPosition()
+getSize()
+maximize():void ==> used to maximize the window 
+minimize()
+setPosition(Point)
+setSize(Dimension)
+
+how to maximize a window ?
+
+driver.manage().window().maximize();
+
+---------------------------------------------
+navigate():Navigation
+
+this is used to navigate back or forward or to any url 
+
+back():void 
+forward()
+refresh()
+to(String) : void ==> this is same as get(String) method 
+to(URL)
+
+------------------------------
+switchTo():TargetLocator
+
+this is used to switch the driver control/ focus to alert, windows/tab , frames ..
+
+activeElement()
+alert()
+defaultContent()
+frame(int)
+frame(String)
+frame(WebElement)
+newWindow(WindowType)
+parentFrame()
+window(String)
+
+----------------------------------------------
+
+
+findElement(By):WebElement 
+
+
+By class static methods are called locators 
+Locators in Selenium : 
+
+
+className(String):By
+cssSelector(String):By
+id(String):By
+linkText(String):By
+name(String):By
+partialLinkText(String):By
+tagName(String):By
+xpath(String):By
+
+
+HTML Terminology :
+
+<input type="text" name="username" id="username" class="login_input" value="" fdprocessedid="xhovjk">
+
+<a href="Register.php">New User Register Here</a>
+
+<tagname attribute1="value of attribute1" attribute2="value of attribute2" ..attributeN="value of attributeN">
+
+<tagname attribute1="value of attribute1" attribute2="value of attribute2" ..attributeN="value of attributeN">text on element</tagName>
+
+
+Locators based on attributes : 
+
+id(String)
+name(String)
+className(String)
+
+Locators based on link text : 
+
+used only for links (hint : for link tagname is "a")
+
+linkText(String):By
+partialLinkText(String):By
+
+
+Locators based on tagName:
+
+tagName(String):By ==> this is used to find multiple elements 
+
+
+
+Locators based on tagName,attributes,text etc .. 
+
+cssSelector(String):By
+xpath(String):By
+
+<img src="images/home.gif" width="118" height="23" border="0">
+
+
+------------------------------
+findElements(By)
+
+13+8+16
+
+--------------------------------------------------------------
+
+WebElement (I) : 
+
+16 methods 
+
+
+
+
+---------
+getAccessibleName()
+getAriaRole()
+getDomAttribute(String)
+getDomProperty(String)
+getShadowRoot()
+---------------------------------------------
+
+***************************
+Methods in WebElement
+***************************
+
+sendKeys(CharSequence...):void 
+
+this will type the CharSequence or String on the Webelement
+
+
+click():void 
+
+
+this will click on WebElement (button , img , checkbox, radio button ..)
+
+
+-----------------------------------------------------
+clear():void 
+
+to clear the existing text on WebElement ( textbox , text area )
+
+---------------------------------------------------------
+
+getText():String 
+
+
+this will return the text present on WebElement in form of String 
+
+------------------------------------------------------
+getAttribute(String):String
+
+this will return the value of attribute 
+
+case 1: attribute having value 
+o/p : value of attribute 
+
+case 2: no attribute 
+o/p : null 
+
+case 3: attribute present but value not assigned 
+o/p : empty string or sometime true 
+
+------------------------------------------------------
+getCssValue(String):String
+
+this will return the css values (color , font weight , etc ..) of the WebElement
+
+-----------------------------------------------------------------
+
+getLocation():Point ( to get x and y coordinates of Left most corner WebElement)
+getSize():Dimension ( to get heigth and width of WebElement)
+getRect():Rectangle ( both)
+
+
+--------------------------------------------------------------------
+
+isDisplayed():boolean 
+isEnabled():boolean 
+isSelected():boolean  --> Dropdown , Checkbox , Radiobutton 
+
+-----------------------------------------------------------------------
+
+getTagName():String 
+
+this will return the tagname of the WebElement
+
+---------------------------------------------------------------
+
+submit():void 
+
+this is used to submit a form to backend server 
+
+------------------------------------------------------------
+
+findElement(By):WebElement
+
+findElements(By):List<WebElement>
+
+
+----------------------------------------------------------------------
+
+
+13 +  8 + 16 
+
+Links :
+
+tagName : "a" 
+
+
+
+<a href="ForgotPassword.php">Forgot Password?</a>
+
+<a href="Register.php">New User Register Here</a>
+
+<a href="mailto:info@adactin.com">info@adactin.com</a>
+
+
+---------------------------------------------------------
+Dropdown 
+
+To select iteam from dropdown , we have 2 ways
+
+i) Conventional way (using SendKeys method)
+
+ii)using Select class
+
+new Select(WebElement);
+
+selectByIndex(int)
+selectByValue(String)
+selectByVisibleText(String) --> prefered 
+
+????????????????????????????????
+Assignment
+
+in https://www.facebook.com/
+
+click on "Create new account" 
+
+in Sign up form
+
+choose your Date of birth using 
+
+Select class 
+
+solution send it to below email add 
+	flmtechteam.testing@gmail.com
+
+???????????????????????????????????
+
+
+
+findElements(By):List<WebElement> 
+
+<a href="ForgotPassword.php">Forgot Password?</a>
+
+<a href="http://www.adactin.com">Adactin.com</a>
+
+<a href="mailto:info@adactin.com">info@adactin.com</a>
+
+Exception in thread "main" org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: stale element not found
+  (Session info: chrome=124.0.6367.119)
+  
+  
+  StaleElementReferenceException :
+  
+  Reason : when there is chnage in html or DOM(Document object Model) , the references of WebElement will get changed 
+  
+   
+  Solution : ReInitilize the WebElements 
+  
+  ????????????????????????????????????????????????????????????
+  Assignment 
+  
+  in https://www.flipkart.com/ app 
+  
+  
+  check all links under "CONSUMER POLICY" module 
+  
+  hint : 
+  
+  xpath : //div[text()='CONSUMER POLICY']/parent::div
+  
+  ????????????????????????????????????????????????????????????
+  
+  
+  Exception in thread "main" org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="/pages/paymentsecurity?otracker=${otracker}_navlinks" class="HlWMPX" aria-label="...">Security</a> is not clickable at point (797, 668). Other element would receive the click: <div class="fbDBuK _3CYmv5" tabindex="-1">...</div>
+  (Session info: chrome=124.0.6367.119)
+  
+  Reason : Element is present but some other element is coming on it in Front End 
+  
+  Solution : First handle that Element which coming as Pop up 
+  
+  Solution 2 : using JavaScriptExecutor (this will be discussed later)
+  
+  -----------------------------------
+  Select (C) : 
+  
+  Select(WebElement)
+  
+  
+  getOptions() :List<WebElement> 
+  
+==============================================================
+
+Frameworks 
+
+							Frameworks
+							
+							
+			InBuilt 						User-Defined 				
+							
+							
+InBuilt/Unit Testing  - based on Programming Language 
+
+
+Java - Junit  , TestNG 
+
+.net -  NUnit 
+
+Python  - 	pytest 
+
+
+TestNG : TestNext Generation 
+
+
+Annotations in TestNG :
+
+
+@somename ==> this will do some action ( predefined code by Framework) 
+
+@Test == > same as main method 
+
+@Test is equivalent to Test case 
+
+If more than one @Test present in class 
+
+Execution order will be as per Alphabetical order of method names 
+
+
+Parameters for @Test annotation 
+
+@BeforeMethod
+
+@AfterMethod 
+
+
+???????????????????????????????????
+
+Assignment
+
+Use TestNG annotations and complete the 
+remaining test cases for Login Functionality
+
+send email to beloe :
+
+flmtechteam.testing@gmail.com
+
+
+??????????????????????????????????????????????????
+						
+							
+Xpath writing Techniques 
+
+Xpath stands for XML path 
+
+HTML  
+
+XML
+
+xpath is a query lang to find XML/HTML nodes
+
+								xpath
+								
+				absolute					relative
+
+
+/html/body/table[2]/tbody/tr/td[2]/form/table/tbody/tr[2]/td[2]/input
+
+/html/body/table[2]/tbody/tr/td[2]/form/table/tbody/tr[2]/td[2]/input
+
+				
+								
+relative xpath writing techniques : 
+
+
+1) xpath using tagname and attribute
+								
+
+//tagname[@attribute='value of attribute']
+
+<input type="text" name="username" id="username" class="login_input" value="">
+
+//input[@id='username']
+
+//input[@id='username']
+
+
+//input[@class='login_input' and @type='password']
+
+
+2) xpath using tagname and text on element 
+
+<tagname attribute1="value of attribute1" attribute2="value of attribute2" ..attributeN="value of attributeN">text on element</tagName>
+
+//tagname[text()='text on element']
+
+//td[text()='Important Note:']
+
+
+3) xpath using contains function
+
+//tagname[contains(@attribute,'subset of value of attribute')]
+
+<img src="img/ios-button.png">
+
+//img[@src='img/ios-button.png']
+or
+//img[contains(@src,'ios-button')]
+
+
+//tagname[contains(text(),'subset of text on element')]
+
+
+4) xpath using starts-with function 
+
+//a[@id='u_0_0_cU']
+
+//a[@id='u_0_0_++']
+
+//tagname[starts-with(@attribute,'starting or the prefix of value of attribute')]
+
+//a[starts-with(@id,'u_0')]	
+
+
+
+Miscellenous Actions : 
+
+org.openqa.selenium.interactions
+
+
+Actions
+
+Actions(WebDriver)
+
+
+Mouse Hover 
+
+moveToElement(WebElement)
+moveToElement(WebElement, int, int)
+
+Drag and Drop 
+
+
+dragAndDrop(WebElement, WebElement)
+dragAndDropBy(WebElement, int, int)
+
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='draggable']"}
+  (Session info: chrome=124.0.6367.207)
+  
+  NoSuchElementException : 
+  
+  Reason 1 : Locator can be incorrect
+  solution 1: correct the locator 
+  
+  Reason 2 : There may be delay in getting the page loaded 
+  Solution 2 : Wait until the page is loaded , this can be achived by Waits 
+  
+  Reason 3 : Element might be present in a frame or iframe 
+  Solution 3: Switch to that particular frame 
+  
+  <iframe src="/resources/demos/droppable/default.html" class="demo-frame"></iframe>
+  
+  ??????????????????????????????????????????????????????????
+  Assignment
+  
+  in below app
+  https://emicalculator.net/
+  
+  drag "Home Loan Amount" to 75 lakhs
+  
+  drag "Interest Rate" to 12.5
+  
+  drag "Loan Tenure" to 15 years 
+  
+  hint : use dragAndDropBy(WebElement, int, int)
+  
+  ????????????????????????????????????????????????????????????
+  
+  
+How to right click ?
+  
+contextClick()
+contextClick(WebElement)
+
+how to perform double click ?
+
+doubleClick()
+doubleClick(WebElement)
+
+???????????????????????????????????????????????????????????????????
+https://selenium-prd.firebaseapp.com/
+
+username : admin123@gmail.com
+password : admin123 
+
+mousehover to "Intractions" tab 
+
+click on "Double Click" menu item 
+
+again click on "Double Click" menu item
+
+now double click on "Double Click" button 5 times to show the count to be 5
+
+hint for xpath : //button[contains(text(),'Intractions')]
+
+
+??????????????????????????????????????????????????????????????????
+
+
+Multiple Window/Tabs Handling 
+
+getWindowHandle():String
+
+getWindowHandles():Set<String> 
+
+switchTo():TargetLocator
+		`window(String)
+		
+
+
+Frame Hanlding : 
+
+Frame will be designed using frame(older html technology) or iframe(newer html technology) tag in tag 
+
+switchTo():TargetLocator
+
+
+frame(int)  -- here int is the index of the frame from the top , index starts from 0
+
+frame(String) -- here String is the id or name attribute of frame or iframe 
+
+frame(WebElement) -- here WebElement is the frame or iframe 
+
+
+defaultContent() -- to bring the control or focus of webdriver back to page 
+
+parentFrame() -- to switch the foucus from child frame to parent frame 
+		
+		
+org.openqa.selenium.NoSuchFrameException: No frame element found by name or id demo-frame		
+
+
+org.openqa.selenium.NoSuchFrameException: No frame element found by name or id contents
+
+
+???????????????????????????????????????????????????????
+Assignment 
+
+go to below app
+
+https://demo.guru99.com/test/guru99home/
+
+
+Click on the image "Jmeter Made Easy"
+
+Then a new tab will get opened 
+
+switch to that tab and print the texts in "Top Tutorials" module
+
+hint : 
+xpath for Top tutorials text 
+
+//p[text()='Top Tutorials']/ancestor::div[contains(@class,'wp-block-kadence-column')][1]/descendant::span[@class='kt-blocks-info-box-title']
+
+???????????????????????????????????????????????????????????????????????
+
+kt-blocks-info-box-title
+
+
+
+-----------------------------------------------
+Alerts Handling :
+
+3 types of alerts
+
+1. simple 
+2. comfirmantion alert 
+3. Prompt alert 
+
+switchTo():TargetLocator
+	- alert():Alert
+
+Methods present in Alert(I):
+accept():void --> clicks Ok on alert
+dismiss():void --> clicks on "Cancel" button 
+getText():String --> returns the text on Alert in String format
+sendKeys(String): void --> to send text on the textbox present in a prompt alert 
+
+
+to validate the text on alert is : Please enter a valid user name
+
+??????????????????????????????????????????????????????
+Assignment
+
+login to below app 
+
+https://demo.guru99.com/v4/
+
+using below credentials
+
+
+User ID :	mngr266311
+Password :	12345678@
+
+--> cclick on "Delete Customer"
+
+--> enter some "Customer ID" for e.g 123478
+
+--> click on "Submit" button
+
+Validate the alert contains below text ?
+Do you really want to delete this Customer?
+
+--> click on "Ok" in alert 
+
+
+--> Validate the alert contains below text ?
+
+Customer does not exist!!
+
+--> click on "Ok" in alert 
+
+????????????????????????????????????????????????????????????????
+
+JavaScriptExecutor(I):
+
+
+
+notification-frame
+
+//iframe[contains(@title,'notification-frame')]
+
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element is not clickable at point (759, 7527)
+ 
+ 
+ Reason 1 : Element is present but not clicked because of another element coming on it
+	        or it might be present in the bottom 
+ 
+ Solution 1: scroll to bottom of page using JavaScript and then click it 
+ 
+ Solution 2 : use JavaScript click method 
+ 
+ 
+ executeScript(String, Object...):Object
+ 
+ here String the javascript statement 
+ 
+ window.scrollBy(0, 1000);
+ 
+ Object... this represent an array of Objects 
+ 
+ 
+ 
+ Waits In Selenium or Synchronization : 
+ 
+ 
+ //a[text()='Create new account']
+ 
+ 
+ 1) hard wait using Thread.sleep(3000);
+ 
+ 
+ 2) driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+ 
+ this is implied for all driver.findElement statements 
+ 
+ 3) Explicit Wait
+ 
+ Wait(I)
+ until(Function<? super F, T>);
+ 
+ WebDriverWait(C)
+ 
+	WebDriverWait(WebDriver, Duration) ==> this constructor will be used 
+	WebDriverWait(WebDriver, Duration, Duration)
+	WebDriverWait(WebDriver, Duration, Duration, Clock, Sleeper)
+	
+ ExpectedConditions(C) 
+ 
+ 4) FluentWait (C)
+ 
+ FluentWait(T) --> this constructor will be used 
+	FluentWait(T, Clock, Sleeper)
+ 
+ this advanced of WebDriverWait 
+ 
+ what improvements can be done for WebDriverWait ?
+ 
+ -> in previous of Selenium 
+  WebDriverWait(WebDriver, long)-> here long always repesents SECONDS
+  withTimeout(Duration)
+ -> polling wait is always 500 ms 
+ pollingEvery(Duration)
+ -> no internal Exception handling mechanism 
+ ignoreAll(Collection<Class<? extends K>>)
+ ignoring(Class<? extends Throwable>)
+ 
+ 
+ WebTables :
+ 
+ <table
+      <thead
+	  <tbody
+	       <tr
+		      <td 
+			  <td
+		   <tr
+		      <td
+			  <td 
+			  
+							WebTables
+							
+							
+			Static							Dynamic 
+
+
+//table/tbody/tr[1]/td[1]/a	 //table/tbody/tr[1]/td[2] ...//table/tbody/tr[1]/td[8]
+
+//table/tbody/tr[2]/td[1]/a	
+:
+:
+	
+
+//table/tbody/tr[36]/td[1]/a
+
+String part1="//table/tbody/tr[";
+String part2="]/td[1]/a";
+
+
+String part1="//table/tbody/tr[";
+String part2="]/td[";
+String part3="]";
+
+
+-------------------------------
+Dynamic WebTable 
+
+?????????????????????????????????????????????????????????????????
+
+https://money.rediff.com/index.html?_gl=1*1fgbskh*_ga*MTkwOTM1MjQ2OC4xNzEwNTExNzM0*_ga_3FM4PW27JR*MTcxNjQ3NzQ5OC4zLjEuMTcxNjQ3NzUyMy4zNS4wLjA.
+
+
+print the table below "ALL MONEYWIZ PAGES "
+
+
+
+???????????????????????????????????????????????????????????????/
+
+Season 3 - Java 
+
+
+Maven ( Build/project management tool )
+
+
+
+how to download and configure
+
+https://maven.apache.org/download.cgi
+
+download the below zip file
+apache-maven-3.9.6-bin.zip
+
+unzip it 
+
+to configure to Environment variables 
+
+MAVEN_HOME D:\FLM19thFeb\jars\apache-maven-3.9.6-bin\apache-maven-3.9.6
+
+M2_HOME D:\FLM19thFeb\jars\apache-maven-3.9.6-bin\apache-maven-3.9.6\bin
+
+path D:\FLM19thFeb\jars\apache-maven-3.9.6-bin\apache-maven-3.9.6\bin
+
+to check the configuration :
+
+go to cmd 
+
+C:\Users\Riyaz>mvn -version
+Apache Maven 3.9.6 (bc0240f3c744dd6b6ec2920b3cd08dcc295161ae)
+Maven home: D:\FLM19thFeb\jars\apache-maven-3.9.6-bin\apache-maven-3.9.6
+Java version: 11.0.22, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-11
+Default locale: en_IN, platform encoding: Cp1252
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+
+
+To work with excels we need Apache POI jars 
+
+
+src/main/java 
+src/main/resources
+src/test/java 
+src/test/resources
+
+
+File 
+
+java.io 
+
+File(File, String)
+File(String)  ==> we will use this , here String is nothing but the path of the file including extension 
+File(String, int)
+File(String, File)
+File(String, String)
+File(URI)
+
+
+to create file use 
+
+createNewFile():boolean
+
+
+---------------------------------------------------------
+
+Folder
+
+File(String)  ==> we will use this , here String is nothing but the path of the folder
+
+to create folder  use 
+
+mkdir():boolean
+
+System.getProperty("user.dir")==> this will return the project path in form of String 
+
+------------------------------------------
+Excel 
+
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>5.2.5</version>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.2.5</version>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-scratchpad</artifactId>
+    <version>5.2.5</version>
+</dependency>
+
+
+								Excel
+								
+								
+							
+				.xls							.xlsx			
+						
+			HSSFWorkbook(C)		Workbook(I)		XSSFWorkbook(C)
+			HSSFSheet(C)		Sheet(I)		XSSFSheet(C)
+			HSSFRow(C)			Row(I)			XSSFRow(C)
+			HSSFCell(C)			Cell(I)			XSSFCell(C)
+			
+			
+=================================================
+			
+methods in XSSFWorkbook(C) :
+						
+getSheet(String):XSSFSheet == we prefer this 
+getSheetAt(int):XSSFSheet 						
+
+=================================================
+methods in XSSFSheet(C):
+
+ws.getLastRowNum():int ==> this will give an integer where counting starts from zero
+
+ws.getPhysicalNumberOfRows():int ==> this will give an integer where counting starts from one
+									 and counting will be skipped if row is blank
+									 
+getRow(int rownum):XSSFRow ==> this will return the Row object of the Row whose index is mentioned								 
+
+=================================================
+
+methods in XSSFRow(C):
+
+row.getLastCellNum():int ==> this will give an integer where counting starts from one
+
+row.getPhysicalNumberOfCells() ==> this will give an integer where counting starts from one
+									 and counting will be skipped if cell is blank
+									 
+row.getCell(int):XSSFCell 	==> this will return the cell object of the cell whose index is mentioned	
+
+=================================================
+Methods in XSSFCell
+
+getCellType():CellType ==> here Celltype is an enum (STRING,NUMERIC,BOOLEAN,etc..)
+
+cell1.getStringCellValue():String 
+
+cell1.getNumericCellValue():Numeric
+
+cell1.getBooleanCellValue() : Boolean								 
+
+
+**************************************
+HOw to writee or update excel 
+
+
+case 1: modifying an existing an cell in row 
+
+ws.getRow(1).getCell(1).setCellValue("New FLM");
+
+case 2: creating a cell in an existing row 
+
+case 3: creating a row and cell in it 
+
+------------------------------------------------
+Properties file 
+
+this files are nothing but flat file 
+which holds key and values 
+
+here keys and vaues are string
+
+.properties
+
+Properties(C)
+java.util
+
+-----------------------------------------------
+
+HashMap(C) --> Map(I) 
+
+Key value pairs 
+
+here key can be of any DataType (int , Integer , String , Student , etc ..)
+value can also be of any DataType (int , Integer , String , Student , etc ..)
+
+
+Map(I)- java.util
+
+	Entry<K, V>(I)
+	
+	Methods in Map(I):
+	
+	entrySet():Set<Entry<K, V>>
+	put(K,V):V
+	size():int ==> no of entries 
+	isEmpty():boolean 
+	
+	
+	methods in Entry (I):
+	
+	getKey():K
+	getValue():V 
+	
+	setValue(V):V 
+	
+	HashMap(C) implements Map(I)
+	
+	HashMap()
+	HashMap(int)
+	HashMap(int, float)
+	HashMap(Map<? extends K, ? extends V>)
+	
+	=============================================================
+	
+Project 1 :
+	
+https://adactinhotelapp.com/
+	
+Data Driven Framework
+	
+For developers :
+
+src/main/java   ==> app code
+				==> java stuf (.java files like classes , interfaces ,enums etc ..)
+src/main/resources  ==> app resources 
+					==> non-java stuf ( .txt,.xlsx,.json,.csv,.proerties etc ..)
+src/test/java   ==> junit test cases 
+				==> java stuf (.java files like classes , interfaces ,enums etc ..)
+src/test/resources ==> test data for junit cases 
+					==non-java stuf ( .txt,.xlsx,.json,.csv,.proerties etc ..)
+					
+For Testers :					
+					
+
+src/main/java   ==> Framework code
+				==> java stuf (.java files like classes , interfaces ,enums etc ..)
+src/main/resources  ==> Framework resources 
+					==> non-java stuf ( .txt,.xlsx,.json,.csv,.proerties etc ..)
+src/test/java   ==> Framework code 
+				==> java stuf (.java files like classes , interfaces ,enums etc ..)
+src/test/resources ==> Framework resources
+					==non-java stuf ( .txt,.xlsx,.json,.csv,.proerties etc ..)	
+
+
+For Data Driven we are going to use concept of 
+
+DataProvider from TestNG 
+
+----------------------------------------
+
+Keyword Driven Framework
+
+here Keywords are nothing but the steps in Test Cases
+
+in this approach , we will define methods for each step and method name will be a keyword 
+
+for e.g 
+
+Step 1: start the chrome browser 
+
+in KDF  , we will define a method for above step by some name 
+ let's say name is startBrowser here name/keyword  should follow camelCase 
+
+Keywords can be classified into  3 types 
+
+GenericKeywords
+
+ValidationKeywords
+
+ApplicationKeywords
+
+
+@BeforTest   ==> this annotated method will be executed only once before all the class in test tag of testng.xml
+@BeforeClass
+@BeforeMethod ==> this annotated method will be executed before each and evert @Test 
+@Test
+@AfterMethod
+@AfterTest
+
+TestNG Hiererchy :
+
+
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="may30th.ValidateLogin"/>
+      <class name="may30th.ValidateRegistration"/>
+    </classes>
+  </test> <!-- Test -->
+
+
+@BeforTest  -> 1
+@BeforeClass -> 2
+@BeforeMethod -> 4
+@Test -> 4
+@AfterMethod -> 4
+@AfterClass -> 2
+@AfterTest  -> 1
+
+----------------------------------
+Hybrid Framework 
+   -> Data Driven
+   -> Keyword Driven
+   -> Page Object Model (design pattern)
+   -> TestNG (unit testing )
+
+Page Object Model : 
+
+Here Page is nothing but a java file or class defined for each Web Page or Screen
+
+in this page or class or java we will have 
+
+WebElements
+methods on WebElements
+
+
+Project or Framework Structure :
+
+
+src/main/java
+src/main/resources
+src/test/java
+	|
+	base
+	  - BaseTest
+	  - BasePage
+	|
+	pages
+		-LoginPage
+		-RegistrationPage
+		-SearchHotelPage
+		-SelectPage
+	|
+	testscripts
+		 |
+		 regression
+			-ValidateLogin
+			-ValidateRegistration
+		 |
+		 smoke
+		 |
+		 insprint
+	|
+	utils 
+		-UtilKit
+		-ExtentManager
+		-MyTestNGListener
+	
+src/test/resources
+	|
+	testdata
+		-excels
+			-MasterTestData.xlsx
+		-jsons
+	|
+	properties
+		-config.proerties
+	
+	
+Page Object Model using PageFactory
+
+@FindBy	this annotation is to find or focus on WebElement
+
+@FindBy(someLocator="value of locator")
+WebElement usernameTextbox;
+
+PageFactory.initElements(
