@@ -2,20 +2,27 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-31T21:35:47 IST" name="Default suite" finished-at="2024-05-31T21:35:55 IST" duration-ms="8549">
+  <suite started-at="2024-06-04T21:25:17 IST" name="Suite" finished-at="2024-06-04T21:25:31 IST" duration-ms="13177">
     <groups>
     </groups>
-    <test started-at="2024-05-31T21:35:47 IST" name="Default test" finished-at="2024-05-31T21:35:55 IST" duration-ms="8549">
+    <test started-at="2024-06-04T21:25:17 IST" name="Test" finished-at="2024-06-04T21:25:31 IST" duration-ms="13177">
       <class name="com.adactinhotelapp.testscripts.regression.ValidateLoginUsingPOMAndDataProvider">
-        <test-method is-config="true" signature="fileSetUp()[pri:0, instance:com.adactinhotelapp.testscripts.regression.ValidateLoginUsingPOMAndDataProvider@7e057f43]" started-at="2024-05-31T21:35:47 IST" name="fileSetUp" finished-at="2024-05-31T21:35:47 IST" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="fileSetUp()[pri:0, instance:com.adactinhotelapp.testscripts.regression.ValidateLoginUsingPOMAndDataProvider@514646ef]" started-at="2024-06-04T21:25:17 IST" name="fileSetUp" finished-at="2024-06-04T21:25:18 IST" duration-ms="487" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fileSetUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.adactinhotelapp.testscripts.regression.ValidateLoginUsingPOMAndDataProvider@7e057f43]" started-at="2024-05-31T21:35:48 IST" name="setUp" finished-at="2024-05-31T21:35:54 IST" duration-ms="6109" status="PASS">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:com.adactinhotelapp.testscripts.regression.ValidateLoginUsingPOMAndDataProvider@514646ef]" started-at="2024-06-04T21:25:19 IST" name="setUp" finished-at="2024-06-04T21:25:27 IST" duration-ms="7447" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5b2b8d86]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateLoginTest(java.util.HashMap)[pri:0, instance:com.adactinhotelapp.testscripts.regression.ValidateLoginUsingPOMAndDataProvider@7e057f43]" started-at="2024-05-31T21:35:54 IST" name="validateLoginTest" data-provider="getData" finished-at="2024-05-31T21:35:55 IST" duration-ms="1006" status="PASS">
+        <test-method signature="validateLoginTest(java.util.HashMap)[pri:0, instance:com.adactinhotelapp.testscripts.regression.ValidateLoginUsingPOMAndDataProvider@514646ef]" started-at="2024-06-04T21:25:27 IST" name="validateLoginTest" data-provider="getData" finished-at="2024-06-04T21:25:29 IST" duration-ms="2848" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,11 +33,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateLoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.adactinhotelapp.testscripts.regression.ValidateLoginUsingPOMAndDataProvider@7e057f43]" started-at="2024-05-31T21:35:55 IST" name="teardown" finished-at="2024-05-31T21:35:55 IST" duration-ms="306" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.adactinhotelapp.testscripts.regression.ValidateLoginUsingPOMAndDataProvider@514646ef]" started-at="2024-06-04T21:25:29 IST" name="teardown" finished-at="2024-06-04T21:25:30 IST" duration-ms="398" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="closeReports()[pri:0, instance:com.adactinhotelapp.testscripts.regression.ValidateLoginUsingPOMAndDataProvider@514646ef]" started-at="2024-06-04T21:25:30 IST" name="closeReports" finished-at="2024-06-04T21:25:31 IST" duration-ms="702" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReports -->
       </class> <!-- com.adactinhotelapp.testscripts.regression.ValidateLoginUsingPOMAndDataProvider -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

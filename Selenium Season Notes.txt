@@ -1334,3 +1334,23 @@ Page Object Model using PageFactory
 WebElement usernameTextbox;
 
 PageFactory.initElements(
+
+-------------------------------------------------------------
+
+Report Mechanism :
+
+
+Extent Reports , Allure Reports etc...
+
+Extent Reports:
+
+3 classes 
+
+1)ExtentReports
+2)ExtentTest
+3)ExtentSparkReporter
+
+
+https://jenkov.com/tutorials/java-internationalization/simpledateformat.html
+
+

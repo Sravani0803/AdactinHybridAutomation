@@ -1,5 +1,6 @@
 package com.adactinhotelapp.utils;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -9,6 +10,8 @@ import java.util.HashMap;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 public class UtilKit {
 	
@@ -79,5 +82,7 @@ public class UtilKit {
 		
 		
 	}
+	
+	
 
 }

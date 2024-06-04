@@ -27,17 +27,22 @@ public class LoginPage extends BasePage{
 	
 	public void usernameTextbox(String text)
 	{
-		usernameTextbox.sendKeys(text);
+		//usernameTextbox.sendKeys(text);
+		
+		type(usernameTextbox, text);
 	}
 	
 	public void passwordTextbox(String text)
 	{
-		passwordTextbox.sendKeys(text);
+		//passwordTextbox.sendKeys(text);
+		type(passwordTextbox, text);
+		
 	}
 	
 	public void loginButton()
 	{
-		loginButton.click();
+		//loginButton.click();
+		click(loginButton);
 	}
 
 }
