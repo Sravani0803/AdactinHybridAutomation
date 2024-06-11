@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.adactinhotelapp.testscripts.regression.ValidateLoginUsingPOM">
+      <class name="com.adactinhotelapp.testscripts.regression.ShadowDomHandle">
         <methods>
-          <include name="validateLoginTest"/>
-          <include name="teardown"/>
-          <include name="fileSetUp"/>
-          <include name="setUp"/>
+          <include name="shadowDomHandleTEst"/>
         </methods>
-      </class> <!-- com.adactinhotelapp.testscripts.regression.ValidateLoginUsingPOM -->
+      </class> <!-- com.adactinhotelapp.testscripts.regression.ShadowDomHandle -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

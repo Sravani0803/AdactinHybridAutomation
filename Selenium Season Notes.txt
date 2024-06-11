@@ -1325,6 +1325,14 @@ src/test/resources
 	properties
 		-config.proerties
 	
+pom.xml 
+	- selenium 
+	- apache poi
+	    -poi
+		-oomxl
+		-scratchpad
+	- testng 
+	-extent reports
 	
 Page Object Model using PageFactory
 
@@ -1353,4 +1361,181 @@ Extent Reports:
 
 https://jenkov.com/tutorials/java-internationalization/simpledateformat.html
 
+***************************************************
+Sample projects for practise 
+
+https://www.opencart.com/index.php?route=cms/demo
+
+https://www.saucedemo.com/
+
+https://app.vwo.com/#/login
+
+https://crm.immoflux.ro/login
+
+https://selenium-prd.firebaseapp.com/
+
+
+************************************************
+
+for all kind of selenium concepts practise 
+
+https://bonigarcia.dev/selenium-webdriver-java/
+
+
+
+================================================
+Project 2:
+
+https://adactinhotelapp.com/
+
+BDD Framework ( this is framework for developers)
+
+Cucumber API + Java Unit Testing Framework
+
+https://cucumber.io/
+
+It’s simple. Whether open source or commercial, our collaboration tools will boost your engineering team's performance by employing Behavior-Driven Development (BDD). 
+And with our world-class training, take it to places it’s never been.
+
+
+Project or Framework Structure :
+
+
+src/main/java
+src/main/resources
+src/test/java
+		|
+		steps
+			-StepDefinitions.java
+		|
+		runner
+			-RegRunner.java
+src/test/resources
+	   |
+	   features
+		  |
+		  smoke
+			- ValidateLogin.feature 
+		  |
+		  regression
+			
+pom.xml 
+	- cucumber java
+	- cucumber junit
+	- selenium
+	
+	
+#Author: your.email@your.domain.com
+#Keywords Summary :
+#Feature: List of scenarios.
+#Scenario: Business rule through list of steps with arguments.
+#Given: Some precondition step
+#When: Some key actions
+#Then: To observe outcomes or validation
+#And,But: To enumerate more Given,When,Then steps
+#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
+#Examples: Container for s table
+#Background: List of steps run before each of the scenarios
+#""" (Doc Strings)
+#| (Data Tables)
+#@ (Tags/Labels):To group Scenarios
+#<> (placeholder)
+#""
+## (Comments)
+#Sample Feature Definition Template
+@tag
+Feature: Title of your feature
+  I want to use this template for my feature file
+
+  @tag1
+  Scenario: Title of your scenario
+    Given I want to write a step with precondition
+    And some other precondition
+    When I complete action
+    And some other action
+    And yet another action
+    Then I validate the outcomes
+    And check more outcomes
+
+  @tag2
+  Scenario Outline: Title of your scenario outline
+    Given I want to write a step with <name>
+    When I check for the <value> in step
+    Then I verify the <status> in step
+
+    Examples: 
+      | name  | value | status  |
+      | name1 |     5 | success |
+      | name2 |     7 | Fail    |
+	
+	
+Manual Testing 
+
+
+Requirements(BRS/SRS)				User stroies
+	|									|
+Test Scenarios						Feature
+	|									|
+Test Cases 							Scenario
+	
+	
+==> 
+Feature:  Behaviour/Functionality/journey 
+ List of scenarios.	
+ 
+ Scenario: Test cases 
+
+ Business rule through list of steps with arguments.
+ 
+ Given: Some precondition step
+ 
+ When: Some key actions
+ @When("user enters below details in registration form")
+public void user_enters_below_details_in_registration_form(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+
+Background: List of steps run before each of the scenarios
+
+----------------------------------------------
+Version Controlling 
+
+git  --> local file system tracking 
+
+github --> cloud file system 
+
+how to download git ?
+
+https://www.git-scm.com/downloads
+
+Latest source Release
+2.45.2
+
+under "Other Git for Windows downloads"
+
+click "64-bit Git for Windows Setup"
+
+
+click on .exe file to install
+
+
+------------------------------------
+how to create github account
+go to https://github.com/
+
+click on Sign up
+Enter your email*
+anjanisai48@gmail.com
+Newpass@123369
+
+
+
+https://github.com/anjanisai48/JavaSeasons
 

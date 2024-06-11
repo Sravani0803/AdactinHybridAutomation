@@ -25,6 +25,13 @@ public class LoginPage extends BasePage{
 	@FindBy(xpath="//input[@name='login']")
 	WebElement loginButton;
 	
+	@FindBy(xpath = "//a[text()='Forgot Password?']")
+	WebElement forgotPasswordLink;
+	
+	public void forgotPasswordLink()
+	{
+		click(forgotPasswordLink);
+	}
 	public void usernameTextbox(String text)
 	{
 		//usernameTextbox.sendKeys(text);
